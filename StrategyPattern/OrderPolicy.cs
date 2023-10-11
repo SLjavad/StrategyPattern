@@ -12,7 +12,7 @@
                 var hotels = providers.SelectMany(x => x.Hotels).DistinctBy(x => x.Name).ToDictionary(x => x.Name, x => false);
                 var hotelList = new List<Hotel>();
 
-                // condition.ProviderOrders is sorted
+
                 foreach (var item in condition.ProviderOrders)
                 {
                     var provider = providers.FirstOrDefault(x => x.ProviderId == item);
